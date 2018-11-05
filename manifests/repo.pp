@@ -14,7 +14,7 @@ case $::lsbdistcodename {
 
       package { 'ProxySQL-Xenial-Repo':
         provider  => dpkg,
-        ensure    => latest,
+        ensure    => installed,
         source    => '/tmp/proxysql-rc2_2.0.0-ubuntu16_amd64.deb',
         requires  => File['/tmp/proxysql-rc2_2.0.0-ubuntu16_amd64.deb'],
       }
