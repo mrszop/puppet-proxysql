@@ -4,7 +4,7 @@
 #
 class proxysql::repo {
 
-case $::lsbdistcodename {
+case $::facts['os']['distro']['codename'] {
     'xenial': {
       file { '/tmp/proxysql-rc2_2.0.0-ubuntu16_amd64.deb':
         ensure  => '/tmp/proxysql-rc2_2.0.0-ubuntu16_amd64.deb',
